@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right bottom,
+    #08203e,
+    #557c93);
+    color: white;
+    display: grid;
+    place-items: center;
+}
+.container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+
+.container h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.container .question {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.container .choices {
+    margin-top: 20px;
+}
+
+.choice {
+    font-size: 13px;
+    background-color: #eee;
+    color: #000;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 80%;
+    cursor: pointer;
+    opacity: ;
+    transform: translateY(50%);
+    animation: fade-in 0.5s ease forwards;
+}
+
+.choice:hover{
+    background-color: #EDE0D1;
+}
+
+.choice.selected{
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn{
+    font-family: "Orbitron", sans-serif;
+    width: 80%;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 20px;
+    margin: 20px auto 0 auto;
+    background-color: #006400;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #08780c;
+}
+.scoreCard{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.alert{
+  background-color: #5d9b63;
+  border-radius: 50x;
+  width: 100%;
+  padding: 12px;
+  position: absolute;
+  top: 0px;
+  display: none;
+}
+.startBtn{
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+}
+.timer{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #08203e;
+    border: 2px solid #f00;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Adding Animation to Timer */
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
