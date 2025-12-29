@@ -59,12 +59,10 @@ const showQuestion = () => {
     choicesBox.appendChild(choiceDiv);
     
     choiceDiv.addEventListener('click', () => {
-      if(choiceDiv.classList.contains('selected')){
-    choiceDiv.classList.remove('selected');
-      }else{
-    choiceDiv.classList.add('selected');
-    }
-    });
+  const choices = document.querySelectorAll(".choice");
+  choices.forEach(c => c.classList.remove("selected"));
+  choiceDiv.classList.add("selected");
+});
   }
   if(currentQuestionIndex < quiz.length){
     startTimer()
